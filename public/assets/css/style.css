@@ -1,4 +1,13 @@
+body {
+  color: yellow;
+  background-image: url(../images/burgerpic.jpg);
+  background-position: fixed;
+  background-repeat: none;
+  background-size: cover;
+}
+
 li {
+  color: black;
   padding: 5px;
   margin: 5px;
   background: #faebd7;
