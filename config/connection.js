@@ -10,7 +10,7 @@ if (process.env.JAWSDB_URL){
     user: 'root',
     password: '',
     port: '3306',
-    database: 'burger_db',
+    database: 'j6573un9fucx1deg',
   })
 }
 // = mysql.createConnection({
