@@ -28,12 +28,21 @@ router.post("/api/burgers", function(req, res) {
 });
 
 router.put("/api/burgers/:id", function(req, res) {
+  console.log('in put', req.body);
   var condition = "id = " + req.params.id;
 
   console.log("condition", condition);
-
+  console.log('devoured', req.body.Devoured);
+  var newDevourStatus = '';
+  if (req.body.Devoured === 'true') {
+    newDevourStatus = false;
+  }
+  else {
+    newDevourStatus = true;
+  }
+  console.log("newDevourStatus", newDevourStatus);
   burger.update({
-    devoured: req.body.devoured
+    devoured: newDevourStatus
   }, condition, function(result) {
     if (result.changedRows == 0) {
       return res.status(404).end();
